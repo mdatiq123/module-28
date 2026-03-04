@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- cdn daisyUI and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    <button onclick="loadData()">load Data</button>
-    <button onclick="loadPost()">load post</button>
-    <ul id="post-container"></ul>
+    <button class="btn btn-success btn-outline" onclick="loadData()">load Data</button>
+    <button class="btn btn-success btn-outline" onclick="loadPost()">load post</button>
+    <!-- <ul id="post-container"></ul> -->
+    <div id="post-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-5  ">
+        
+    </div>
     <script src="json.js"></script>
 </body>
+
 </html>

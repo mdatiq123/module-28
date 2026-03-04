@@ -36,22 +36,27 @@ const loadPost = () => {
     })
 }
 
-const displayPost = (posts) => {
-    // console.log(post);
 
-    // 1.get the post container
+const displayPost = (posts) =>{
+    // 1.get the element
     const postContainer =document.getElementById("post-container")
     postContainer.innerHTML = ""
-    // console.log(postContainer);
+
 
     posts.forEach(post =>{
-        // console.log(post.title);
-        // 2.create a html element
-        const li =document.createElement("li")
-        li.innerText = post.title
-        // console.log(li);
-        // 3.append element to parent
-        postContainer.appendChild(li)
+        // console.log(post);
+        // 2. create element
+        const div =document.createElement("div")
+        div.innerHTML = `<div class="card-body border shadow rounded-sm h-full">
+                <h2 class="card-title text-primary uppercase text-sm">${post.title.slice(0, 20)}...</h2>
+                <p class="text-gray-600">${post.body}</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-sm btn-ghost">Read More</button>
+                </div>
+            </div>      
+        ` 
+        // console.log(p);
+        // 3.append child element to parent
+        postContainer.appendChild(div)
     })
 }
-
